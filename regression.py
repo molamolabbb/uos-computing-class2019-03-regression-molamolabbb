@@ -23,7 +23,7 @@ if __name__ == "__main__":
     # Plot, regression here
 
     # Example of writing out the R2.txt file, with 0.0 guess for coefficient of correlation
-    fout = open('R2.txt', 'w')
+    fout = open('results.txt', 'w')
     for i in range(13):
         column = [row[i] for row in data]  # get the column
         target  # target is always the median house value
