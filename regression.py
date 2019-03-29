@@ -36,7 +36,6 @@ def r_squared(alpha, beta, x, y):
     m = mean(y)
     ss_tot = sum([(i-m)**2 for i in y])
     ss_res = sum([(y[i]-predict(alpha,beta,x[i]))**2 for i in range(len(y)) ])
-    #print ss_tot, ss_res
     return 1-(ss_res/ss_tot)
 
 if __name__ == "__main__":
@@ -67,7 +66,6 @@ if __name__ == "__main__":
         alpha, beta = linear_regression_least_squares(column,target)
         plt.clf()
         plt.scatter(column ,target)
-        #plt.savefig("<0>.png")
         f_min = predict(alpha, beta, min(column))
         f_max = predict(alpha, beta, max(column))
         plt.plot([min(column),max(column)],[f_min,f_max],'r')
