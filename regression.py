@@ -70,7 +70,7 @@ if __name__ == "__main__":
         f_max = predict(alpha, beta, max(column))
         plt.plot([min(column),max(column)],[f_min,f_max],'r')
         plt.savefig(str(i)+".png")
-        R2 = r_squared(alpha,beta,x,target)  # Fill with the real value from your code
+        R2 = r_squared(alpha,beta,column,target)  # Fill with the real value from your code
         fout.write('%f,%f,%f\n' % (alpha, beta, R2))  # One line per variable
     fout.close()
 
